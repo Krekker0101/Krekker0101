@@ -1,67 +1,77 @@
-<p align="center">
-  <img src="assets/profile-banner.svg" alt="Build with intent — software, systems, products" width="100%" />
-</p>
-
-# Abdullo Ashurov
-
-**Software Engineer · Systems Architecture · Product Engineering**
-
-I build independent software projects focused on practical problems — from offline-first desktop applications to automation platforms and systems that explore more complex workflows.
-
-I care about the engineering behind a product: clear structure, reliable behavior, maintainable code, and decisions that make software useful beyond the first demo.
-
-**BUILD WITH INTENT. ENGINEER WHAT MATTERS.**
+<!-- GitHub-native Mermaid diagrams, collapsible details, and a locally stored animated banner. -->
+<p align="center"><img src="assets/profile-banner.gif" alt="Animated dark banner: Build with intent" width="100%" /></p>
+<h1 align="center">Abdullo Ashurov</h1>
+<p align="center"><strong>Software Engineer · Systems Architecture · Product Engineering</strong><br/>Building independent products through thoughtful engineering.</p>
+<p align="center"><code>PRODUCTS</code> · <code>SYSTEMS</code> · <code>AUTOMATION</code></p>
+<p align="center"><a href="#architecture-at-a-glance">Architecture</a> · <a href="#selected-work">Selected work</a> · <a href="ARCHITECTURE.md">Deep-dive diagrams</a></p>
 
 ---
 
-## 01 / Selected Work
+## Architecture at a glance
 
-### [MaktabOS](https://github.com/Krekker0101/MaktabOS)
-An offline-first school management application and student information system for maintaining local student records, with Excel and Word import/export workflows. Built with Python, PySide6, and SQLite.
+This map groups my public repositories by problem space. It does **not** imply that these projects are one connected platform.
 
-### [Noz-Bogh POS](https://github.com/Krekker0101/Noz-Bogh)
-A desktop point-of-sale system for restaurant operations, including table and order management, kitchen workflow, payments, administration, backups, and reporting — designed to work locally without a permanent cloud connection.
+```mermaid
+flowchart TB
+    ME["Abdullo Ashurov<br/>Independent product engineering"]
+    ME --> LOCAL["Offline-first desktop software"]
+    ME --> AUTO["Automation & integrations"]
+    ME --> VISION["Computer vision & traffic systems"]
+    ME --> WEB["Web & communication products"]
+    ME --> MOBILE["Mobile & camera tools"]
+    LOCAL --> M["MaktabOS<br/>Python · PySide6 · SQLite"]
+    LOCAL --> N["Noz-Bogh POS<br/>Python · Qt · SQLite"]
+    AUTO --> P["PULSE<br/>Telegram · Python · PostgreSQL"]
+    AUTO --> C["ChatPilot<br/>Telegram · FastAPI · optional Redis"]
+    VISION --> R["RohAI<br/>Vision · tracking · dashboard"]
+    WEB --> L["LinkUp<br/>Go backend · web frontend"]
+    WEB --> G["GAPAK<br/>Go · React starter"]
+    WEB --> B["Bunker<br/>C++ game core · Telegram transport"]
+    MOBILE --> S["Scetch<br/>Flutter · local-first camera tracing"]
+    classDef root fill:#111418,stroke:#86DDB2,color:#F5F7F6,stroke-width:2px;
+    classDef product fill:#171B1F,stroke:#59645F,color:#F0F3F1;
+    class ME root;
+    class M,N,P,C,R,L,G,B,S product;
+```
 
-### [PULSE](https://github.com/Krekker0101/PULSE)
-A Telegram-managed social media automation project for monitoring YouTube videos and Shorts, analyzing engagement, applying content filters, and managing publishing workflows for supported platforms.
+<details>
+<summary><strong>How to read this map</strong></summary>
 
-### [RohAI — Smart Traffic AI](https://github.com/Krekker0101/RohAI)
-A traffic-intelligence and computer-vision project exploring video analysis, object tracking, simulation, and observation-first workflows for smart-intersection systems. Simulation and real-world hardware activation are treated as separate stages.
+- **Offline-first desktop:** local workflows and data storage are central to MaktabOS and Noz-Bogh POS.
+- **Automation:** PULSE focuses on content discovery and publishing workflows; ChatPilot focuses on Telegram Business auto-replies and administration.
+- **Vision systems:** RohAI separates dashboard, analysis/simulation, and guarded hardware-facing workflows.
+- **Communication and web:** LinkUp, GAPAK, and Bunker explore different application and service boundaries.
+- **Mobile tools:** Scetch focuses on camera-assisted tracing with local project storage.
 
-### [LinkUp](https://github.com/Krekker0101/LinkUp) · [Frontend](https://github.com/Krekker0101/LinkUp-frontend)
-A web communication-platform project exploring real-time messaging, user access, and the separation of backend services from the frontend.
+Arrows group projects by purpose; they do not imply repository dependencies.
 
-### [Scetch](https://github.com/Krekker0101/Kashak)
-A Flutter camera-tracing and drawing app concept for placing a reference image over a live camera view and adjusting it while drawing by hand.
-
----
-
-## 02 / Engineering Focus
-
-- **Product engineering** — shaping ideas into practical software.
-- **System design** — keeping components understandable and responsibilities clear.
-- **Offline-first software** — building tools that remain useful without depending on a permanent internet connection.
-- **Automation** — reducing repetitive work through focused software workflows.
-- **Reliability and maintainability** — prioritizing predictable behavior and long-term clarity.
-
-## 03 / Tools Across My Projects
-
-`Python` · `Go` · `C++` · `TypeScript` · `JavaScript` · `Dart`  
-`SQLite` · `PostgreSQL` · `PySide6 / Qt` · `React` · `Docker`
-
-*The tools vary by project. The goal stays the same: choose a suitable approach and build something useful.*
-
-## 04 / Principles
-
-- Clarity over unnecessary complexity.
-- Products over empty promises.
-- Thoughtful architecture over quick patches.
-- Useful outcomes over decoration.
-- Keep learning by building and refining real projects.
+</details>
 
 ---
 
-<p align="center">
-  <strong>BUILD WITH INTENT.</strong><br />
-  <sub>Less noise. Better systems. Meaningful products.</sub>
-</p>
+## Selected work
+
+| Project | Focus | Technologies |
+|---|---|---|
+| [**MaktabOS**](https://github.com/Krekker0101/MaktabOS) | Offline school register, student records, Excel/Word import and export | Python · PySide6 · SQLite |
+| [**Noz-Bogh POS**](https://github.com/Krekker0101/Noz-Bogh) | Desktop restaurant POS, kitchen workflow, payments, backups and reporting | Python · PySide6 · SQLite |
+| [**PULSE**](https://github.com/Krekker0101/PULSE) | Telegram-managed YouTube discovery, engagement analysis, filtering and publishing workflows | Python · Telegram · PostgreSQL |
+| [**ChatPilot**](https://github.com/Krekker0101/ChatPilot) | Telegram Business auto-reply assistant, admin tools and optional state/scheduling integrations | Python · FastAPI · aiogram |
+| [**RohAI**](https://github.com/Krekker0101/RohAI) | Smart-traffic exploration with video analysis, tracking, simulation and dashboard | Python · computer vision · TypeScript |
+| [**LinkUp**](https://github.com/Krekker0101/LinkUp) · [Frontend](https://github.com/Krekker0101/LinkUp-frontend) | Communication platform exploring real-time messaging and separated backend/frontend | Go · TypeScript |
+| [**Bunker**](https://github.com/Krekker0101/Bunker) | Telegram social game with C++ game engine and separated persistence/transport | C++ · SQLite · Telegram |
+| [**GAPAK**](https://github.com/Krekker0101/GAPAK) | Go + React web application starter focused on auth and application structure | Go · React · PostgreSQL |
+| [**Scetch**](https://github.com/Krekker0101/Kashak) | Camera tracing and drawing app with adjustable overlays and local projects | Flutter · Dart · SQLite |
+
+[**Explore all public repositories →**](https://github.com/Krekker0101?tab=repositories) · [**Open the architecture atlas →**](ARCHITECTURE.md)
+
+## Engineering principles
+
+- **Clarity over accidental complexity.**
+- **Products over empty promises.**
+- **Architecture that can evolve.**
+- **Local-first when it improves control and resilience.**
+- **Real implementation, documented limitations, and incremental refinement.**
+
+<p align="center"><strong>BUILD WITH INTENT.</strong><br/><sub>Less noise. Better systems. Meaningful products.</sub></p>
+
